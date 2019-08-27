@@ -289,8 +289,8 @@ class Studentsession1920O(models.Model):
     att_start_date = models.DateField(blank=True, null=True)
     reg_form_status = models.CharField(max_length=10)
     reg_date_time = models.DateTimeField(blank=True, null=True)
-    section_id = models.IntegerField(db_column='Section_id', blank=True, null=True)  # Field name made lowercase.
-    sem_id = models.IntegerField(db_column='Sem_id', blank=True, null=True)  # Field name made lowercase.
+    section_id = models.ForeignKey('Sections', models.DO_NOTHING,db_column='Section_id', blank=True, null=True)  # Field name made lowercase.
+    sem_id = models.ForeignKey('StudentSemester',models.DO_NOTHING,db_column='Sem_id', blank=True, null=True)  # Field name made lowercase.
     session = models.IntegerField(blank=True, null=True)
 
     class Meta:

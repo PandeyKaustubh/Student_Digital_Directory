@@ -105,7 +105,7 @@ def get_Detail(dept,sem,sec):
 	l=len(uid)
 	data=[]
 	for x in range (0,l):
-		q3=list(StudentPrimdetail.objects.filter(uniq_id=uid[x]['uniq_id']).values('name','dept_detail__dept__value','lib_id','uni_roll_no','email_id','uniq_id','uniq_id__mob','uniq_id__class_roll_no'))
+		q3=list(StudentPrimdetail.objects.filter(uniq_id=uid[x]['uniq_id']).values('name','dept_detail__dept__value','lib_id','uni_roll_no','email_id','uniq_id','uniq_id__mob','uniq_id__class_roll_no','uniq_id__section_id__section','uniq_id__sem_id__sem'))
 		data.extend(q3)
 	return(data)
 
