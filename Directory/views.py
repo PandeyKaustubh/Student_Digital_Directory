@@ -18,7 +18,7 @@ def get_Course(request):
 	if request.method == 'POST' :
 		data = json.loads(request.body)
 
-		if(data["Username"]=="admin" and data["Password"]=="12345"):
+		if(data["Username"]=="1822IT1070" and data["Password"]=="KIET123"):
 			q=StudentDropdown.objects.filter(field="COURSE").values('value','sno')
 			d1={"Status":"True","data":list(q)}
 			# print(d1)
@@ -91,7 +91,7 @@ def get_sec(dept,sem):
 
 def get_Detail(dept,sem,sec):
 	# section=A,B...dept=41,41...sem=1,3,4	
-	# print(dept,sem,sec)/
+	print(dept,sem,sec)
 	q4=list(StudentSemester.objects.filter(dept__in=dept,sem__in=sem).values_list('sem_id',flat=True))
 	
 	q5=list(Sections.objects.filter(dept_detail__in=dept,sem_id__in=q4,section__in=sec).values('section_id'))
