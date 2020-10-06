@@ -18,22 +18,24 @@ from django.db import models
 #         db_table = 'Details_datatable'
 
 
-# class DetailsDetails(models.Model):
-#     fname = models.CharField(db_column='Fname', max_length=100)  # Field name made lowercase.
-#     lname = models.CharField(db_column='Lname', max_length=100)  # Field name made lowercase.
-#     mobile_no = models.CharField(db_column='Mobile_no', max_length=12)  # Field name made lowercase.
-#     email = models.CharField(db_column='Email', max_length=100)  # Field name made lowercase.
-#     address = models.CharField(db_column='Address', max_length=500)  # Field name made lowercase.
-#     city = models.CharField(db_column='City', max_length=25)  # Field name made lowercase.
-#     gender = models.CharField(db_column='Gender', max_length=20)  # Field name made lowercase.
-#     highestqualification = models.CharField(db_column='HighestQualification', max_length=25)  # Field name made lowercase.
-#     pincode = models.IntegerField(db_column='PinCode')  # Field name made lowercase.
-#     school = models.CharField(db_column='School', max_length=50)  # Field name made lowercase.
-#     state = models.CharField(db_column='State', max_length=25)  # Field name made lowercase.
+class DetailsDetails(models.Model):
+    fname = models.CharField(db_column='Fname', max_length=100)  # Field name made lowercase.
+    lname = models.CharField(db_column='Lname', max_length=100)  # Field name made lowercase.
+    mobile_no = models.CharField(db_column='Mobile_no', max_length=12)  # Field name made lowercase.
+    email = models.CharField(db_column='Email', max_length=100)  # Field name made lowercase.
+    address = models.CharField(db_column='Address', max_length=500)  # Field name made lowercase.
+    city = models.CharField(db_column='City', max_length=25)  # Field name made lowercase.
+    gender = models.CharField(db_column='Gender', max_length=20)  # Field name made lowercase.
+    highestqualification = models.CharField(db_column='HighestQualification', max_length=25)  # Field name made lowercase.
+    pincode = models.IntegerField(db_column='PinCode')  # Field name made lowercase.
+    school = models.CharField(db_column='School', max_length=50)  # Field name made lowercase.
+    state = models.CharField(db_column='State', max_length=25)  # Field name made lowercase.
 
-#     class Meta:
-#         managed = False
-#         db_table = 'Details_details'
+    class Meta:
+        managed = False
+        db_table = 'Details_details'
+        
+   #USE this models for the branch purpose
 
 
 # class PlayAlbum(models.Model):
