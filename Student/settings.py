@@ -87,20 +87,22 @@ WSGI_APPLICATION = 'Student.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-DATABASES={
-    'default':
-            {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'kpdbest',
-            'USER': 'phpmyadmin',
-            'PASSWORD': '13079',
-            'HOST':'127.0.0.1',
-            'PORT':'',
-            'OPTIONS': {
-              'init_command': "SET sql_mode ='STRICT_TRANS_TABLES' "
-            }
-        }
-}
+# DATABASES={
+#     'default':
+#             {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'kpdbest',
+#             'USER': 'phpmyadmin',
+#             'PASSWORD': '13079',
+#             'HOST':'127.0.0.1',
+#             'PORT':'',
+#             'OPTIONS': {
+#               'init_command': "SET sql_mode ='STRICT_TRANS_TABLES' "
+#             }
+#         }
+# }
+#Comment all the essential passwords
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
