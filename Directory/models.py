@@ -173,28 +173,28 @@ class DetailsDetails(models.Model):
 #         unique_together = (('user', 'permission'),)
 
 
-# class DjangoAdminLog(models.Model):
-#     action_time = models.DateTimeField()
-#     object_id = models.TextField(blank=True, null=True)
-#     object_repr = models.CharField(max_length=200)
-#     action_flag = models.PositiveSmallIntegerField()
-#     change_message = models.TextField()
-#     content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING, blank=True, null=True)
-#     user = models.ForeignKey(AuthUser, models.DO_NOTHING)
+class DjangoAdminLog(models.Model):
+    action_time = models.DateTimeField()
+    object_id = models.TextField(blank=True, null=True)
+    object_repr = models.CharField(max_length=200)
+    action_flag = models.PositiveSmallIntegerField()
+    change_message = models.TextField()
+    content_type = models.ForeignKey('DjangoContentType', models.DO_NOTHING, blank=True, null=True)
+    user = models.ForeignKey(AuthUser, models.DO_NOTHING)
 
-#     class Meta:
-#         managed = False
-#         db_table = 'django_admin_log'
+    class Meta:
+        managed = False
+        db_table = 'django_admin_log'
 
 
-# class DjangoContentType(models.Model):
-#     app_label = models.CharField(max_length=100)
-#     model = models.CharField(max_length=100)
+class DjangoContentType(models.Model):
+    app_label = models.CharField(max_length=100)
+    model = models.CharField(max_length=100)
 
-#     class Meta:
-#         managed = False
-#         db_table = 'django_content_type'
-#         unique_together = (('app_label', 'model'),)
+    class Meta:
+        managed = False
+        db_table = 'django_content_type'
+        unique_together = (('app_label', 'model'),)
 
 
 # class DjangoMigrations(models.Model):
