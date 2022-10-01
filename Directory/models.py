@@ -75,26 +75,26 @@ class DetailsDetails(models.Model):
 #         db_table = 'Select_sec'
 
 
-# class SelectSemes(models.Model):
-#     semester = models.CharField(max_length=100)
-#     linkb = models.ForeignKey(SelectBran, models.DO_NOTHING, db_column='linkB_id')  # Field name made lowercase.
+class SelectSemes(models.Model):
+    semester = models.CharField(max_length=100)
+    linkb = models.ForeignKey(SelectBran, models.DO_NOTHING, db_column='linkB_id')  # Field name made lowercase.
 
-#     class Meta:
-#         managed = False
-#         db_table = 'Select_semes'
+    class Meta:
+        managed = False
+        db_table = 'Select_semes'
 
 
-# class TestSudo(models.Model):
-#     fname = models.CharField(db_column='Fname', max_length=100)  # Field name made lowercase.
-#     fa_name = models.CharField(db_column='Fa_Name', max_length=100)  # Field name made lowercase.
-#     mobile_no = models.CharField(db_column='Mobile_no', max_length=100)  # Field name made lowercase.
-#     fa_mobile_no = models.CharField(db_column='Fa_Mobile_no', max_length=100)  # Field name made lowercase.
-#     email = models.CharField(db_column='Email', max_length=100)  # Field name made lowercase.
-#     gender = models.CharField(db_column='Gender', max_length=20)  # Field name made lowercase.
+class TestSudo(models.Model):
+    fname = models.CharField(db_column='Fname', max_length=100)  # Field name made lowercase.
+    fa_name = models.CharField(db_column='Fa_Name', max_length=100)  # Field name made lowercase.
+    mobile_no = models.CharField(db_column='Mobile_no', max_length=100)  # Field name made lowercase.
+    fa_mobile_no = models.CharField(db_column='Fa_Mobile_no', max_length=100)  # Field name made lowercase.
+    email = models.CharField(db_column='Email', max_length=100)  # Field name made lowercase.
+    gender = models.CharField(db_column='Gender', max_length=20)  # Field name made lowercase.
 
-#     class Meta:
-#         managed = False
-#         db_table = 'Test_sudo'
+    class Meta:
+        managed = False
+        db_table = 'Test_sudo'
 
 
 # class TestUser(models.Model):
